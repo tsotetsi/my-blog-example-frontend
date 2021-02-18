@@ -22,9 +22,11 @@ let fetchBlogPosts = function() {
     .then(function(data){
         let tableOpen = `<table>
                             <tr>
+                                <th>ID</th>
                                 <th>Title</th>
                                 <th>Description</th>
                                 <th>Author</th>
+                                <th>Date posted</th>
                             </tr>`;
         let tableClose = `</table>`;
         let trRow = ``;
@@ -42,5 +44,5 @@ let fetchBlogPosts = function() {
         console.log(tableOpen + trRow + tableClose);
         document.getElementById('blogTableData').innerHTML = tableOpen + trRow + tableClose
 
-    })    
+    })
 }
