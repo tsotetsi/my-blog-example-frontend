@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:5000/get-all-posts/"
+const apiUrl = API_LINK  + "get-all-posts/";
 
 let send = function() {
 
@@ -17,6 +17,7 @@ let send = function() {
 }
 
 let fetchBlogPosts = function() {
+    console.log(apiUrl);
     fetch(apiUrl)
     .then(response => response.json())
     .then(function(data){
